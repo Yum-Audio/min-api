@@ -122,6 +122,10 @@ namespace c74::min {
 			return m_pen_tilt_y;   
         }
 
+        auto modifiers () const {
+            return m_modifiers;
+        }
+
     private:
         max::t_object*  m_self;
         ui::target      m_target;
