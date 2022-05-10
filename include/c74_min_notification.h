@@ -45,9 +45,9 @@ namespace c74::min {
         /// The name of the attribute being modified if this is a notification for local attribute modification.
         /// @return the name of the attribute if this notification is for a local attribute notification. otherwise the empty symbol will be returned.
 
-        auto attr_name() const {
+        auto attr_name(bool checkIfModified = true) const {
             symbol attribute_name;
-            if (is_attr_modified()) {
+            if (is_attr_modified() || ! checkIfModified ) {
                 auto retval = c74::max::object_method(m_data, k_sym_getname);
                 attribute_name = static_cast<c74::max::t_symbol*>(retval);
             }
