@@ -98,6 +98,9 @@ namespace c74::min {
             return *this;
         }
 
+		double** getRawPointer () {
+			return m_samples;
+		}
     private:
         double** m_samples { nullptr };
         long     m_channel_count {};
