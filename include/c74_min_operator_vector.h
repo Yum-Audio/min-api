@@ -207,7 +207,7 @@ namespace c74::min {
         /// It is called internally any time the dsp chain containing your object is compiled.
         /// @param	a_vector_size	A new vector size with which your object will be updated.
 
-        void vector_size(const double a_vector_size) {
+        void vector_size(const int a_vector_size) {
             m_vector_size = a_vector_size;
         }
 
@@ -215,7 +215,7 @@ namespace c74::min {
         /// Return the current vector size for this object's signal chain.
         /// @return	The vector size in samples.
 
-        double vector_size() const {
+        int vector_size() const {
             return m_vector_size;
         }
 
